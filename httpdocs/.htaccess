@@ -1,0 +1,11 @@
+RewriteEngine On
+
+## Forward to SSL - works behind load balancer ##
+# RewriteCond %{HTTPS} !=on
+# RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+# RewriteRule ^/?(.*) https://www.lovetogivehere.com/$1 [R=301,L]
+
+## Flight stuff ##
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]

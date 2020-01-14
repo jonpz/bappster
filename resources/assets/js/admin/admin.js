@@ -1,0 +1,21 @@
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
+jQuery(document).ready(function($){
+  var dt = require( 'datatables.net' )( window, $ );
+  require('bootstrap-sass');
+  require( 'datatables.net-bs' )();
+  require( 'datatables.net-buttons-bs' )();
+  require( 'datatables.net-responsive-bs' )();
+  var select2 = require('select2')();
+  require('../../vendor/sortablejs/jquery.fn.sortable');
+  require('flatpickr');
+  require('slick-carousel');
+  require('./main');
+  require('./users');
+  require('./roles');
+  require('./sections');
+  require('./report-columns');
+  require('./emails');
+  require('./audit-logs');
+});

@@ -1,0 +1,9 @@
+/node_modules
+/package-lock.json
+/private/vendor
+/private/composer.lock
+/httpdocs/assets/js/*
+/httpdocs/assets/css/*
+/httpdocs/assets/fonts/*
+/httpdocs/upload/emails/*
+.DS_Store
