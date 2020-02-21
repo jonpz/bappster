@@ -1,6 +1,6 @@
 ## bappster
 
-A silly little webapp bolierplate built with the [Laravel framework](https://laravel.com).
+If a web log is a blog, why isn't a web app a bapp? A silly little webapp bolierplate built with the [Laravel framework](https://laravel.com).
 
 ## License
 
