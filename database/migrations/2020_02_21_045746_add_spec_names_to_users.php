@@ -15,9 +15,8 @@ class AddSpecNamesToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('name');
-            $table->string('first_name');
-            $table->string('last_name')->nullable();
-            $table->string('pref_name')->nullable();
+            $table->string('first_name')->after('id');
+            $table->string('last_name')->after('first_name')->nullable();
         });
     }
 
@@ -29,8 +28,8 @@ class AddSpecNamesToUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['first_name', 'last_name', 'pref_name']);
-            $table->string('name');
+            $table->dropColumn(['first_name', 'last_name']);
+            $table->string('name')->after('id');
         });
     }
 }
